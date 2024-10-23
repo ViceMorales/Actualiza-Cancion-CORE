@@ -20,10 +20,19 @@
 	<p>
 		<b>Idioma: ${cancion.idioma}</b>
 	<div>
+		<button>
 		<a href="/canciones"> Regresar a canciones </a>
+		</button>
 	</div>
-	<div>
-	<a href="/canciones/formulario/editar/${cancion.id}">Editar cancion</a>
+		<button>
+		<a href="/canciones/formulario/editar/${cancion.id}">Editar cancion</a>
+		</button>
+		<form action="/canciones/eliminar/${cancion.id}" method="POST">
+			<input type="hidden" name="_method" value="DELETE"/>
+			<button> Eliminar </button>
+		</form>
 	</div>
+	
+	
 </body>
 </html>
